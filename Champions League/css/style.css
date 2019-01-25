@@ -1,0 +1,612 @@
+@font-face {
+    src: url(../fonts/italianno/Italianno-Regular-OTF.otf);
+    font-family: 'Italianno';
+}
+body {
+    font-family: 'Assistant', sans-serif;
+    color: #333333;
+    background-color: #cccccc;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+/* This is the image that used for the upper part */
+.league {
+    background-image: url(../images/trophy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+    height: 815px;
+    max-width: 100%;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    position: fixed;
+    margin-top: 0%;
+}
+/* id logo - main logo */
+#logo {
+    width: 70px;
+    height: 70px;
+    align: left top;
+    padding: 4px;
+}
+/*main navigation bar*/
+.main-nav ul{
+    list-style-type: none;
+    text-align:right;
+    margin-top: -50px;
+    margin-right: 5px;
+    max-width: 100%;
+}
+.main-nav ul li {
+    display: inline;
+}
+a {
+    padding: 18px;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
+    transition: 1s;
+}
+.main-nav ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(144, 51, 167);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .6s;
+}
+.main-nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.main-nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background:rgb(144, 51, 167);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .6s;
+}
+.main-nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+#firstHeader {
+    position: absolute;
+    margin-left: 10% ;
+    margin-top: 10px;
+    color: rgb(144, 51, 167);
+    font-size: 2vw;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 700;
+    letter-spacing: 8px;
+    word-spacing: 2px;
+    position: fixed;
+}
+/* To make the first letter bigger*/
+#firstHeader::first-letter {
+    font-size: 3vw;
+    font-weight: bold;
+}
+.search-box {
+    position: absolute;
+    top : 45%;
+    left: 24.5%;
+    background: transparent;
+    height: 21px;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid white;
+    align-content: center;
+    max-width: 100%;
+
+}
+.search-button {
+    color: white;
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+    transition: .6s;
+    line-height: 20px;
+    width: 650px;
+}
+.social ul{
+    /*display: flex;*/
+    
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-95%,-59%);
+    max-width: 100%;
+}
+.social ul li {
+    list-style: none;
+}
+.social ul li a {
+    display: block;
+    color: whitesmoke;
+    font-size: 1.5vw;
+}
+.social ul li:hover {
+    transform: translateX(20px);
+    box-shadow: 0 12px 12px ivory;
+}
+.first-topic {
+    background-color: #333333;
+    max-width: 100%;
+    margin: 0px;
+    height: 130px;
+    border-radius: 4px;
+}
+.about {
+    background-color: #f7f2f2;
+    font-size: 19px; 
+    color: #262626;
+    padding: 5px;
+    max-width: 100%;
+    height: 15%;
+    margin: 3px;
+    border-radius: 4px;
+}
+#about-main {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #e6e6e6;
+    font-family: 'Miriam Libre', sans-serif;
+    padding: 20px;
+}
+#about-main::first-letter {
+    font-size: 50px;
+    color: rgb(144, 51, 167);
+}
+#main-intro::first-letter {
+    font-size: 35px;
+    color: black;
+    font-weight: 800;
+}
+#main-intro {
+    text-align: justify;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 5px;
+}
+.topic {
+    font-size: 20px;
+    font-weight: 700;
+    color: #262626;
+}
+.main-topic {
+    max-width: 100%;
+    height: 130px;
+    background-color: #333333;
+    margin: 4px 0px;
+    font-size: 36px;
+    color: #e6e6e6;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 1px;
+    border-radius: 4px;
+}
+#topic::first-letter {
+    font-size: 50px;
+    color: rgb(144, 51, 167);
+}
+.main-table {
+    background-color: #f7f2f2;
+    max-width: 33%;
+    margin: 3px;
+    padding: 5px;
+    float: left;
+    color: #262626;
+    font-size: 16;
+    font-weight: 300;
+    font-family: 'Miriam Libre', sans-serif;
+    margin-top: -1px;
+    height: 572px;
+    text-align: justify;
+    border-radius: 4px;
+}
+.table {
+    font-family: 'El Messiri', sans-serif;
+    border-collapse: collapse;
+    width: 100%;  
+    padding: 2px;
+}
+  
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 4px;
+    height: 28px;
+    align-content: center;
+}
+.table tr:nth-child(even){background-color: #f2f2f2;}
+  
+.table tr:hover {background-color: #ddd;}
+  
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(144, 51, 167);;
+    color: white;
+}
+.table tr {
+text-align: center;
+}
+#fixtures {
+    font-size: 22px;
+    font-family: 'Miriam Libre', sans-serif;
+    color: #262626;
+    font-weight: 600;
+    padding-top: -25px;
+    text-align: center;
+}
+#draw {
+    margin: -1px 3px;
+    padding: 5px;
+    max-width: 33%;
+    height: 572px;
+    float: left;
+    background-color: #f7f2f2;
+    border-radius: 4px;
+}
+#champs {
+    margin-top: 13px;
+    color: #262626;
+    font-size: 22px;
+    text-align: center;
+    padding: 5px 5px;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 600;
+}
+#pic {
+    margin-left: 1px;
+    margin-bottom: 0;
+
+}
+.upcoming {
+    margin-right: 3px;
+    margin-left: 1px;
+    margin-top: -1px;
+    padding: 5px;
+    width: 31%;
+    height: 572px;
+    float: right;
+    background-color: #f7f2f2;
+    text-align: center;
+    font-family: 'Miriam Libre', sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+}
+#final {
+    font-size: 22px;
+    font-family: 'Miriam Libre', sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+.gallery {
+    background-color: #333333;
+    max-width: 100%;
+    padding-top: -2px;
+    margin: 0px;
+    height: 90px;
+    margin-top: 39%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    color: #e6e6e6;
+    font-family: 'Miriam Libre', sans-serif;
+    padding: 20px;
+    border-radius: 4px;
+}
+#main-gallery {
+    margin-top: 5px;
+}
+#main-gallery::first-letter {
+    font-size: 50px;
+    color: rgb(144, 51, 167);
+}
+@keyframes cont {
+  
+    10% {
+        left: 0%;
+    }
+   
+    20% {
+        left: -50%;
+    }
+    
+    30% {
+        left: -100%;
+    }
+    
+    40% {
+        left: -150%;
+    }
+    
+    50% {
+        left: -200%;
+    }
+    
+    60% {
+        left: -250%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    80% {
+        left: -350%;
+    }
+
+    90% {
+        left: -400%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+#cont {
+    overflow: hidden;
+}
+#cont figure img {
+    width: 10%;
+    height: 475px;
+    float: left;
+    border-radius: 5px;
+}
+#cont figure {
+    position: relative;
+    width: 500%;
+    margin: 3px 0;
+    text-align: left;
+    animation: 30s cont infinite;
+    animation-delay: 0s;
+}
+.latest-news {
+    max-width: 100%;
+    height: 130px;
+    background-color: #333333;
+    margin: 3px 0px;
+    font-size: 36px;
+    color: #e6e6e6;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 1px;
+    border-radius: 4px;
+}
+#news-latest::first-letter {
+    font-size: 50px;
+    color: rgb(144, 51, 167);
+}
+.top-box {
+    background-color: #f7f2f2;
+    max-width: 100%;
+    border-radius: 4px;
+    height: 785px;
+    margin: 3px 1px;
+    padding: 15px;
+    text-align: justify;
+    font-size: 16px;
+}
+#one {
+    max-width: 100%;
+    height: 130px;
+    background-color: #333333;
+    margin: 3px 0px;
+    font-size: 36px;
+    color: #e6e6e6;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 1px;
+    border-radius: 4px;
+}
+#one::first-letter {
+    font-size: 50px;
+    color: rgb(144, 51, 167);
+}
+h3 {
+    font-family: 'Thasadith', sans-serif;
+    font-size: 24px; 
+    color: rgb(144, 51, 167); ;
+    font-weight: 700;
+}
+
+/* This will be used o make the navbar responsive
+@media screen and (max-width:400px) {
+    . ul li.left,
+    . ul li {float:none;}
+}*/
+.Button {
+    color: rgb(144, 51, 167);
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+}
+.Button:hover {
+    background-color: darkgrey;
+    padding: 2px;
+}
+#pic {
+    margin-left: 1px;
+    margin-bottom: 0;
+
+}
+.day {
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #660000;
+}
+.group {
+    font-size: 16px;
+    font-weight: 900; 
+    color: #660000;
+}
+.one {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px 5px;
+    border-radius: 4px;
+    
+}
+.two {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 4px;
+    
+}
+.three {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px;
+    padding-right: 5px;
+    border-radius: 4px;
+    
+}
+.four {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px 5px;
+    border-radius: 4px;
+}
+.five {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 4px;
+}
+.six {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    float: left;
+    width: 32%;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 4px;
+}
+.day {
+    text-align: center;
+    font-size: 26px;
+    
+}
+#last {
+    width: 100%;
+    height: 230px;
+    background-color: black;
+    color: #e6e6e6;
+    margin-top: 80%;
+
+}
+#foot {
+    font-size: 16px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+#add {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: -70px;
+}
+#contact {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-top: -158px;
+    float: right;
+    padding: 15px;
+}
+.social-footer ul{
+    display: flex;
+    position: absolute;
+    /*transform: translate(-95%,-59%);*/
+    max-width: 100%;
+    padding: -5px;
+    margin-left: 38%;
+    
+}
+.social-footer ul li {
+    list-style: none;
+}
+.social-footer ul li a {
+    display: block;
+    color: whitesmoke;
+    font-size: 1.5vw;
+}
+.social-footer ul li:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 12px 12px ivory;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
